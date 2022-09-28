@@ -1,2 +1,2 @@
 # wopy
-Convert text to ascii art
+Convert text to ascii art.
