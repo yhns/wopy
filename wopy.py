@@ -32,7 +32,6 @@ edge_font = {
         'w' : ['   ▄ ▄      ', '  █   █     ', ' █ ▄   █    ', ' █  █  █    ', '  █ █ █     ', '   ▀ ▀      ', '            '],
         'y' : [' ▀▄    ▄    ', '   █  █     ', '    ▀█      ', '    █       ', '  ▄▀        ', '            ', '            '],
         'z' : ['  ▄▄▄▄▄▄    ', ' ▀   ▄▄▀    ', '  ▄▀▀   ▄▀  ', '  ▀▀▀▀▀▀    ', '            ', '            ', '            ']
-
         }
 
 
@@ -102,9 +101,16 @@ def main():
                 print(color)
             return
 
-
-    for i in user_text:
-        print(edge_font[i], end='')   
+    print()
+    result = ''
+    for i in range(0, len(edge_font['a'])):
+        for j in user_text:
+            if j == ' ':
+                result += ''
+            else:    
+                result += edge_font[j][i]
+        print(result)
+        result = ''
 
 
 if __name__ == '__main__':
